@@ -141,7 +141,7 @@
             <td data-cell="I12" class="sps-bold sps-bggreen sps-textwhite"></td>
         </tr>
         <tr>
-            <td data-cell="A13"></td>
+            <td data-cell="A13">&nbsp;</td>
             <td data-cell="B13"></td>
             <td data-cell="C13"></td>
             <td data-cell="D13"></td>
@@ -153,14 +153,14 @@
         </tr>
         <tr>
             <td data-cell="A14"></td>
-            <td data-cell="B14"></td>
-            <td data-cell="C14"></td>
+            <td data-cell="B14" colspan="2"></td>
+            <!-- <td data-cell="C14"></td> -->
             <td data-cell="D14"></td>
-            <td data-cell="E14"></td>
-            <td data-cell="F14"></td>
+            <td data-cell="E14" colspan="2"></td>
+            <!-- <td data-cell="F14"></td> -->
             <td data-cell="G14"></td>
-            <td data-cell="H14"></td>
-            <td data-cell="I14"></td>
+            <td data-cell="H14" colspan="2"></td>
+            <!-- <td data-cell="I14"></td> -->
         </tr>
         <tr>
             <td data-cell="A15">&nbsp;</td>

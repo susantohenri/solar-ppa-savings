@@ -47,6 +47,10 @@ jQuery(document).ready(() => {
         H12: { formula: `'Lifetime Savings'` },
         I12: { formula: `C12-F12`, format: `$0,0.00` },
 
+        B14: { formula: `GRAPH(C19:C43, ['type=line', 'orientation=vertical'])` },
+        E14: { formula: `GRAPH(F19:F43, ['type=line', 'orientation=vertical'])` },
+        H14: { formula: `GRAPH(C19:F43, ['type=line', 'orientation=vertical'])` },
+
         B16: { formula: `'PG&E'` },
         E16: { formula: `'SUNRUN'` },
         H16: { formula: `'SAVINGS'` },
@@ -62,6 +66,7 @@ jQuery(document).ready(() => {
         F18: { formula: `F6`, format: `0.0%` },
 
         B19: { formula: `'What You Pay Per Year'` },
+        // B19: { formula: `1` },
         C19: { formula: `C10`, format: `$0,0.00` },
         E19: { formula: `'What You Pay Per Year'` },
         F19: { formula: `F9*12`, format: `$0,0.00` },
@@ -83,7 +88,6 @@ jQuery(document).ready(() => {
         data[`H${breakdown}`] = { formula: `C${breakdown}-F${breakdown}`, format: `$0,0.00` }
     }
 
-    console.log({ data })
     jQuery(`#solar-ppa-savings`).calx({ data });
 
     for (let blue = 4; blue <= 10; blue++) {

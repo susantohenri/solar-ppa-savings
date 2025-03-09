@@ -8,25 +8,31 @@ add_shortcode('solar-ppa-savings-calculator', function () {
         'solar-ppa-savings',
         plugins_url('/solar-ppa-savings.css', __FILE__)
     );
-    wp_enqueue_style('solar-ppa-savings', 999);
+    wp_enqueue_style('solar-ppa-savings');
 
     wp_register_script(
         'numeral',
         plugins_url('/numeral.min.js', __FILE__)
     );
-    wp_enqueue_script('numeral', 999);
+    wp_enqueue_script('numeral');
+
+    wp_register_script(
+        'jquery-flot',
+        plugins_url('/jquery.flot.min.js', __FILE__)
+    );
+    wp_enqueue_script('jquery-flot');
 
     wp_register_script(
         'jquery-calx',
         plugins_url('/jquery-calx-2.2.6.min.js', __FILE__)
     );
-    wp_enqueue_script('jquery-calx', 999);
+    wp_enqueue_script('jquery-calx');
 
     wp_register_script(
         'solar-ppa-savings',
         plugins_url('/solar-ppa-savings.js', __FILE__)
     );
-    wp_enqueue_script('solar-ppa-savings', 999);
+    wp_enqueue_script('solar-ppa-savings');
 
     ob_start();
     include('sheet-1.php');
