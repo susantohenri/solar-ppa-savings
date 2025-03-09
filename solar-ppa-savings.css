@@ -1,0 +1,54 @@
+table#solar-ppa-savings td {
+    padding-top: 0;
+    padding-bottom: 0;
+    border: 0;
+    vertical-align: middle;
+}
+
+table#solar-ppa-savings td[data-cell^="A"],
+table#solar-ppa-savings td[data-cell^="D"],
+table#solar-ppa-savings td[data-cell^="G"] {
+    width: 1px;
+}
+
+table#solar-ppa-savings td[data-cell^="C"],
+table#solar-ppa-savings td[data-cell^="F"],
+table#solar-ppa-savings td[data-cell^="I"] {
+    text-align: right;
+}
+
+table#solar-ppa-savings [type="text"] {
+    margin: 2px auto;
+    height: 20px;
+    font-size: 12px;
+    text-align: right;
+    width: 100px;
+}
+
+.sps-bgred {
+    background-color: red;
+}
+
+.sps-bgblue {
+    background-color: blue;
+}
+
+.sps-bggreen {
+    background-color: green;
+}
+
+.sps-bglightblue{
+    background-color: #c9daf8;
+}
+
+.sps-textcenter {
+    text-align: center;
+}
+
+.sps-bold {
+    font-weight: bold;
+}
+
+.sps-textwhite {
+    color: white;
+}
