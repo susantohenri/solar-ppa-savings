@@ -31,7 +31,9 @@ jQuery(document).ready(() => {
         E9: { formula: `'Monthly Payment'` },
         F9: { formula: `F7+F8`, format: `$0.00` },
         H9: { formula: `'Monthly Savings'` },
-        I9: { formula: `(H44/25)/12`, format: `$0.00` },
+        // I9: { formula: `(H44/25)/12`, format: `$0.00` }, from original spreadsheet
+        // I9: { formula: `(C10/12) - (F10/12)`, format: `$0.00` }, from explanation rtf
+        I9: { formula: `C9-F9`, format: `$0.00` }, // from monthly sheet
 
         B10: { formula: `'Annual Electricity Payments'` },
         C10: { formula: `C9*12`, format: `$0,0.00` },
