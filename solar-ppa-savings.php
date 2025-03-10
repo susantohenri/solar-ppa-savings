@@ -35,6 +35,6 @@ add_shortcode('solar-ppa-savings-calculator', function () {
     wp_enqueue_script('solar-ppa-savings');
 
     ob_start();
-    include('sheet-1.php');
+    include('tabs.php');
     return ob_get_clean();
 });
