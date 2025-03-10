@@ -1,11 +1,11 @@
-<table id="yr25">
+<table id="monthly">
     <tbody>
         <tr>
             <td data-cell="A1"></td>
             <!-- <td data-cell="B1"></td> -->
             <!-- <td data-cell="C1"></td> -->
             <!-- <td data-cell="D1"></td> -->
-            <td data-cell="E1" colspan="7" style="color: blue;font-size: 22px;font-weight: bold; text-align: center;">LIFETIME SOLAR SAVINGS</td>
+            <td data-cell="E1" colspan="7" style="color: blue;font-size: 22px;font-weight: bold; text-align: center;">MONTHLY SOLAR SAVINGS</td>
             <!-- <td data-cell="F1"></td> -->
             <!-- <td data-cell="G1"></td> -->
             <!-- <td data-cell="H1"></td> -->
@@ -36,9 +36,7 @@
         <tr>
             <td data-cell="A4"></td>
             <td data-cell="B4"></td>
-            <td>
-                <input type="text" data-cell="C4" value="13000">
-            </td>
+            <td data-cell="C4"></td>
             <td data-cell="D4"></td>
             <td data-cell="E4"></td>
             <td data-cell="F4"></td>
@@ -49,9 +47,7 @@
         <tr>
             <td data-cell="A5"></td>
             <td data-cell="B5"></td>
-            <td>
-                <input type="text" data-cell="C5" value="0.5">
-            </td>
+            <td data-cell="C5"></td>
             <td data-cell="D5"></td>
             <td data-cell="E5"></td>
             <td data-cell="F5"></td>
@@ -62,9 +58,7 @@
         <tr>
             <td data-cell="A6"></td>
             <td data-cell="B6"></td>
-            <td>
-                <input type="text" data-cell="C6" value="0.07">
-            </td>
+            <td data-cell="C6"></td>
             <td data-cell="D6"></td>
             <td data-cell="E6"></td>
             <td data-cell="F6"></td>
@@ -74,9 +68,7 @@
         </tr>
         <tr>
             <td data-cell="A7"></td>
-            <td data-cell="B7">
-                <small>* 2,000sqft home in California</small>
-            </td>
+            <td data-cell="B7"></td>
             <td data-cell="C7"></td>
             <td data-cell="D7"></td>
             <td data-cell="E7"></td>
@@ -115,19 +107,19 @@
             <td data-cell="E10"></td>
             <td data-cell="F10"></td>
             <td data-cell="G10"></td>
-            <td data-cell="H10" class="sps-bggreen sps-textwhite sps-bold"></td>
-            <td data-cell="I10" class="sps-bggreen sps-textwhite sps-bold"></td>
+            <td data-cell="H10"></td>
+            <td data-cell="I10">&nbsp;</td>
         </tr>
         <tr>
-            <td data-cell="A11">&nbsp;</td>
-            <td data-cell="B11">&nbsp;</td>
-            <td data-cell="C11">&nbsp;</td>
-            <td data-cell="D11">&nbsp;</td>
-            <td data-cell="E11">&nbsp;</td>
-            <td data-cell="F11">&nbsp;</td>
-            <td data-cell="G11">&nbsp;</td>
-            <td data-cell="H11">&nbsp;</td>
-            <td data-cell="I11">&nbsp;</td>
+            <td data-cell="A11"></td>
+            <td data-cell="B11" class="sps-bgred sps-bold"></td>
+            <td data-cell="C11" class="sps-bgred sps-bold"></td>
+            <td data-cell="D11"></td>
+            <td data-cell="E11" class="sps-bgblue sps-textwhite sps-bold"></td>
+            <td data-cell="F11" class="sps-bgblue sps-textwhite sps-bold"></td>
+            <td data-cell="G11"></td>
+            <td data-cell="H11" class="sps-bggreen sps-textwhite sps-bold"></td>
+            <td data-cell="I11" class="sps-bggreen sps-textwhite sps-bold"></td>
         </tr>
         <tr>
             <td data-cell="A12"></td>
@@ -153,14 +145,14 @@
         </tr>
         <tr>
             <td data-cell="A14"></td>
-            <td data-cell="B14" colspan="2"></td>
-            <!-- <td data-cell="C14"></td> -->
+            <td data-cell="B14"></td>
+            <td data-cell="C14"></td>
             <td data-cell="D14"></td>
-            <td data-cell="E14" colspan="2"></td>
-            <!-- <td data-cell="F14"></td> -->
+            <td data-cell="E14"></td>
+            <td data-cell="F14"></td>
             <td data-cell="G14"></td>
-            <td data-cell="H14" colspan="2"></td>
-            <!-- <td data-cell="I14"></td> -->
+            <td data-cell="H14"></td>
+            <td data-cell="I14">&nbsp;</td>
         </tr>
         <tr>
             <td data-cell="A15"></td>
@@ -171,28 +163,28 @@
             <td data-cell="F15"></td>
             <td data-cell="G15"></td>
             <td data-cell="H15"></td>
-            <td data-cell="I15">&nbsp;</td>
+            <td data-cell="I15"></td>
         </tr>
         <tr>
             <td data-cell="A16"></td>
-            <td data-cell="B16" class="sps-bold"></td>
+            <td data-cell="B16"></td>
             <td data-cell="C16"></td>
             <td data-cell="D16"></td>
-            <td data-cell="E16" class="sps-bold"></td>
+            <td data-cell="E16"></td>
             <td data-cell="F16"></td>
             <td data-cell="G16"></td>
-            <td data-cell="H16" class="sps-bggreen"></td>
-            <td data-cell="I16"></td>
+            <td data-cell="H16"></td>
+            <td data-cell="I16">&nbsp;</td>
         </tr>
         <tr>
             <td data-cell="A17"></td>
-            <td data-cell="B17"></td>
+            <td data-cell="B17" class="sps-bold"></td>
             <td data-cell="C17"></td>
             <td data-cell="D17"></td>
-            <td data-cell="E17"></td>
+            <td data-cell="E17" class="sps-bold"></td>
             <td data-cell="F17"></td>
             <td data-cell="G17"></td>
-            <td data-cell="H17"></td>
+            <td data-cell="H17" class="sps-bggreen"></td>
             <td data-cell="I17"></td>
         </tr>
         <tr>
@@ -483,14 +475,25 @@
         </tr>
         <tr>
             <td data-cell="A44"></td>
-            <td data-cell="B44" class="sps-bold"></td>
-            <td data-cell="C44" class="sps-bold"></td>
+            <td data-cell="B44"></td>
+            <td data-cell="C44"></td>
             <td data-cell="D44"></td>
-            <td data-cell="E44" class="sps-bold"></td>
-            <td data-cell="F44" class="sps-bold"></td>
+            <td data-cell="E44"></td>
+            <td data-cell="F44"></td>
             <td data-cell="G44"></td>
-            <td data-cell="H44" class="sps-bold"></td>
+            <td data-cell="H44"></td>
             <td data-cell="I44"></td>
+        </tr>
+        <tr>
+            <td data-cell="A45"></td>
+            <td data-cell="B45" class="sps-bold"></td>
+            <td data-cell="C45" class="sps-bold"></td>
+            <td data-cell="D45"></td>
+            <td data-cell="E45" class="sps-bold"></td>
+            <td data-cell="F45" class="sps-bold"></td>
+            <td data-cell="G45"></td>
+            <td data-cell="H45" class="sps-bold"></td>
+            <td data-cell="I45"></td>
         </tr>
     </tbody>
 </table>

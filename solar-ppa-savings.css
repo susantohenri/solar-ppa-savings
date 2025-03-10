@@ -1,26 +1,26 @@
-table#solar-ppa-savings td {
+.solar-ppa-savings table td {
     padding-top: 0;
     padding-bottom: 0;
     border: 0;
     vertical-align: middle;
 }
 
-table#solar-ppa-savings td[data-cell^="A"] {
+.solar-ppa-savings table td[data-cell^="A"] {
     display: none;
 }
 
-table#solar-ppa-savings td[data-cell^="D"],
-table#solar-ppa-savings td[data-cell^="G"] {
+.solar-ppa-savings table td[data-cell^="D"],
+.solar-ppa-savings table td[data-cell^="G"] {
     width: 1px;
 }
 
-table#solar-ppa-savings td[data-cell^="C"],
-table#solar-ppa-savings td[data-cell^="F"],
-table#solar-ppa-savings td[data-cell^="I"] {
+.solar-ppa-savings table td[data-cell^="C"],
+.solar-ppa-savings table td[data-cell^="F"],
+.solar-ppa-savings table td[data-cell^="I"] {
     text-align: right;
 }
 
-table#solar-ppa-savings [type="text"] {
+.solar-ppa-savings table [type="text"] {
     margin: 2px auto;
     height: 20px;
     font-size: 12px;
@@ -58,8 +58,8 @@ table#solar-ppa-savings [type="text"] {
 
 /* henri */
 
-.sps label,
-.sps a {
+.solar-ppa-savings label,
+.solar-ppa-savings a {
     cursor: pointer;
     user-select: none;
     text-decoration: none;
@@ -70,12 +70,12 @@ table#solar-ppa-savings [type="text"] {
     padding: 3px 2px;
 }
 
-.sps label:hover,
-.sps a:hover {
+.solar-ppa-savings label:hover,
+.solar-ppa-savings a:hover {
     border-bottom-color: #9b59b6;
 }
 
-.sps {
+.solar-ppa-savings {
     display: grid;
     height: 100%;
     width: 100%;
@@ -84,11 +84,11 @@ table#solar-ppa-savings [type="text"] {
     grid-template-columns: 1fr 1fr;
 }
 
-.sps input[type=radio] {
+.solar-ppa-savings input[type=radio] {
     display: none;
 }
 
-.sps label.nav {
+.solar-ppa-savings label.nav {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,26 +100,26 @@ table#solar-ppa-savings [type="text"] {
     padding-left: 0;
 }
 
-.sps input[type=radio]:checked+.page+label.nav {
+.solar-ppa-savings input[type=radio]:checked+.page+label.nav {
     background: #0b507f;
     color: #ffffff;
     padding-left: 20px;
 }
 
-.sps input[type=radio]:checked+.page+label.nav span {
+.solar-ppa-savings input[type=radio]:checked+.page+label.nav span {
     padding-left: 20px;
 }
 
-.sps input[type=radio]:checked+.page+label.nav svg {
+.solar-ppa-savings input[type=radio]:checked+.page+label.nav svg {
     opacity: 1;
 }
 
-.sps label.nav span {
+.solar-ppa-savings label.nav span {
     padding-left: 0px;
     position: relative;
 }
 
-.sps label.nav svg {
+.solar-ppa-savings label.nav svg {
     left: 0;
     top: -3px;
     position: absolute;
@@ -128,116 +128,116 @@ table#solar-ppa-savings [type="text"] {
     transition: opacity 0.2s;
 }
 
-.sps .page {
+.solar-ppa-savings .page {
     grid-column-start: 1;
     grid-row-start: 2;
     grid-column-end: span 3;
     /* padding: 0px 20px; */
-    display: flex;
+    /* display: flex; */
     align-items: center;
 }
 
-.sps .page-contents>* {
+.solar-ppa-savings .page-contents>* {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.2s, transform 0.2s;
 }
 
-.sps .page-contents>*:nth-child(1) {
+.solar-ppa-savings .page-contents>*:nth-child(1) {
     transition-delay: 0.4s;
 }
 
-.sps .page-contents>*:nth-child(2) {
+.solar-ppa-savings .page-contents>*:nth-child(2) {
     transition-delay: 0.6s;
 }
 
-.sps .page-contents>*:nth-child(3) {
+.solar-ppa-savings .page-contents>*:nth-child(3) {
     transition-delay: 0.8s;
 }
 
-.sps .page-contents>*:nth-child(4) {
+.solar-ppa-savings .page-contents>*:nth-child(4) {
     transition-delay: 1s;
 }
 
-.sps .page-contents>*:nth-child(5) {
+.solar-ppa-savings .page-contents>*:nth-child(5) {
     transition-delay: 1.2s;
 }
 
-.sps .page-contents>*:nth-child(6) {
+.solar-ppa-savings .page-contents>*:nth-child(6) {
     transition-delay: 1.4s;
 }
 
-.sps .page-contents>*:nth-child(7) {
+.solar-ppa-savings .page-contents>*:nth-child(7) {
     transition-delay: 1.6s;
 }
 
-.sps .page-contents>*:nth-child(8) {
+.solar-ppa-savings .page-contents>*:nth-child(8) {
     transition-delay: 1.8s;
 }
 
-.sps .page-contents>*:nth-child(9) {
+.solar-ppa-savings .page-contents>*:nth-child(9) {
     transition-delay: 2s;
 }
 
-.sps .page-contents>*:nth-child(10) {
+.solar-ppa-savings .page-contents>*:nth-child(10) {
     transition-delay: 2.2s;
 }
 
-.sps .page-contents>*:nth-child(11) {
+.solar-ppa-savings .page-contents>*:nth-child(11) {
     transition-delay: 2.4s;
 }
 
-.sps .page-contents>*:nth-child(12) {
+.solar-ppa-savings .page-contents>*:nth-child(12) {
     transition-delay: 2.6s;
 }
 
-.sps .page-contents>*:nth-child(13) {
+.solar-ppa-savings .page-contents>*:nth-child(13) {
     transition-delay: 2.8s;
 }
 
-.sps .page-contents>*:nth-child(14) {
+.solar-ppa-savings .page-contents>*:nth-child(14) {
     transition-delay: 3s;
 }
 
-.sps .page-contents>*:nth-child(15) {
+.solar-ppa-savings .page-contents>*:nth-child(15) {
     transition-delay: 3.2s;
 }
 
-.sps .page-contents>*:nth-child(16) {
+.solar-ppa-savings .page-contents>*:nth-child(16) {
     transition-delay: 3.4s;
 }
 
-.sps .page-contents>*:nth-child(17) {
+.solar-ppa-savings .page-contents>*:nth-child(17) {
     transition-delay: 3.6s;
 }
 
-.sps .page-contents>*:nth-child(18) {
+.solar-ppa-savings .page-contents>*:nth-child(18) {
     transition-delay: 3.8s;
 }
 
-.sps .page-contents>*:nth-child(19) {
+.solar-ppa-savings .page-contents>*:nth-child(19) {
     transition-delay: 4s;
 }
 
-.sps .page-contents>*:nth-child(20) {
+.solar-ppa-savings .page-contents>*:nth-child(20) {
     transition-delay: 4.2s;
 }
 
-.sps input[type=radio]+.page {
+.solar-ppa-savings input[type=radio]+.page {
     transition: transform 0.2s;
     transform: translateX(100%);
 }
 
-.sps input[type=radio]:checked+.page {
+.solar-ppa-savings input[type=radio]:checked+.page {
     transform: translateX(0%);
 }
 
-.sps input[type=radio]:checked+.page .page-contents>* {
+.solar-ppa-savings input[type=radio]:checked+.page .page-contents>* {
     opacity: 1;
     transform: translateY(0px);
 }
 
-.sps .page-contents {
+.solar-ppa-savings .page-contents {
     max-width: 100%;
     /* width: 500px; */
     /* margin: 0 auto; */

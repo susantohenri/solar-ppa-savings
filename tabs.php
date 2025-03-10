@@ -1,8 +1,7 @@
-    <div class="sps">
+    <div class="solar-ppa-savings">
         <input name="nav" type="radio" class="nav home-radio" id="home" checked="checked" />
         <div class="page home-page">
             <div class="page-contents">
-                <br>
                 <?php include('sheet-1.php'); ?>
             </div>
         </div>
@@ -13,8 +12,7 @@
         <input name="nav" type="radio" class="about-radio" id="about" />
         <div class="page about-page">
             <div class="page-contents">
-                <h1>About</h1>
-                <p>Amet consectetur adipisicing elit. Sed ipsam ad exercitationem, quo quae ullam, quidem laudantium corporis quis minima debitis nesciunt repellat. Quos dolore ex quis voluptas, minus ut?</p>
+                <?php include('sheet-5.php'); ?>
             </div>
         </div>
         <label class="nav" for="about">
