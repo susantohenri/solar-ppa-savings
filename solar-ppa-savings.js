@@ -6,17 +6,14 @@ jQuery(document).ready(() => {
 
         B4: { formula: `'Annual kWh Usage*'` },
         E4: { formula: `'Annual System kWh'` },
-        F4: { formula: `C4`, format: `0,0` },
 
         B5: { formula: `'Average Rate per kWh'` },
         E5: { formula: `'Sunrun kWh Rate'` },
-        F5: { formula: `0.199`, format: `$0.000` },
         H5: { formula: `'Rate Savings'` },
         I5: { formula: `1-(F5/C5)`, format: `0%` },
 
         B6: { formula: `'PG&E Annual Rate Increase %'` },
         E6: { formula: `'Inflation Escalator'` },
-        F6: { value: 0.035, format: `0.0%` },
 
         E7: { formula: `'Monthly Solar'` },
         F7: { formula: `if(F4<1,C4*F5/12,F4*F5/12)`, format: `$0.00` },
@@ -24,7 +21,6 @@ jQuery(document).ready(() => {
         B8: { formula: `'Avg kWh per month'` },
         C8: { formula: `C4/12`, format: `0` },
         E8: { formula: `'Monthly Battery'` },
-        F8: { formula: `65`, format: `$0.00` },
 
         B9: { formula: `'Monthly Electricity Payments'` },
         C9: { formula: `C8*C5`, format: `$0.00` },
