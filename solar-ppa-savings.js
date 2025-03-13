@@ -208,4 +208,17 @@ jQuery(document).ready(() => {
         jQuery(`#monthly [data-cell="E${r1719}"]`).addClass(`sps-bglightblue`)
         jQuery(`#monthly [data-cell="F${r1719}"]`).addClass(`sps-bglightblue`)
     }
+
+    document.getElementById("download-pdf").addEventListener("click", function () {
+        const element = document.getElementById("generate-pdf");
+        const options = {
+            margin: 1,
+            filename: 'Solar PPA Savings.pdf',
+            image: { type: 'jpeg', quality: 0.98 },
+            html2canvas: { dpi: 192, letterRendering: true },
+            jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+        html2pdf(element, options);
+    });
+
 })

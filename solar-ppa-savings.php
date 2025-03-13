@@ -29,6 +29,12 @@ add_shortcode('solar-ppa-savings-calculator', function () {
     wp_enqueue_script('jquery-calx');
 
     wp_register_script(
+        'html2pdf',
+        plugins_url('/html2pdf.bundle.js', __FILE__)
+    );
+    wp_enqueue_script('html2pdf');
+
+    wp_register_script(
         'solar-ppa-savings',
         plugins_url('/solar-ppa-savings.js', __FILE__)
     );
