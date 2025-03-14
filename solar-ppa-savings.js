@@ -103,8 +103,8 @@ jQuery(document).ready(() => {
 
     // monthly
     const datamonthly = {
-        B2: { formula: `'PG&E'` },
-        E2: { formula: `'SUNRUN'` },
+        B2: { formula: `'PG&E Monthly Payment'` },
+        E2: { formula: `'SUNRUN Monthly Payment'` },
         H2: { formula: `'SAVINGS'` },
 
         B4: { formula: `'Annual kWh Usage*'` },
@@ -211,14 +211,26 @@ jQuery(document).ready(() => {
 
     document.getElementById("download-pdf").addEventListener("click", function () {
         const element = document.getElementById("generate-pdf");
+        jQuery(element).find(`input[type="text"]`).each(function () {
+            const input = jQuery(this)
+            input.parent(`td`).append(`<span>${input.val()}</span>`).addClass(`sps-textright`)
+            input.hide()
+        })
         const options = {
-            margin: 1,
+            margin: [0.88, 0.15, 0, 0.15],
             filename: 'Solar PPA Savings.pdf',
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { dpi: 192, letterRendering: true },
             jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
         };
         html2pdf(element, options);
+        setTimeout(() => {
+            jQuery(element).find(`input[type="text"]`).each(function () {
+                const input = jQuery(this)
+                input.parent(`td`).find(`span`).remove()
+                input.show()
+            })
+        }, 1000)
     });
 
 })

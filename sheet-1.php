@@ -41,7 +41,7 @@
             </td>
             <td data-cell="D4"></td>
             <td data-cell="E4"></td>
-            <td class="sps-bgblue">
+            <td class="sps-bgblue sps-textwhite">
                 <input type="text" data-cell="F4" value="13000">
             </td>
             <td data-cell="G4"></td>
@@ -56,7 +56,7 @@
             </td>
             <td data-cell="D5"></td>
             <td data-cell="E5"></td>
-            <td class="sps-bgblue">
+            <td class="sps-bgblue sps-textwhite">
                 <input type="text" data-cell="F5" value="0.199">
             </td>
             <td data-cell="G5"></td>
@@ -71,7 +71,7 @@
             </td>
             <td data-cell="D6"></td>
             <td data-cell="E6"></td>
-            <td class="sps-bgblue">
+            <td class="sps-bgblue sps-textwhite">
                 <input type="text" data-cell="F6" value="0.035">
             </td>
             <td data-cell="G6"></td>
@@ -97,7 +97,7 @@
             <td data-cell="C8"></td>
             <td data-cell="D8"></td>
             <td data-cell="E8"></td>
-            <td class="sps-bgblue">
+            <td class="sps-bgblue sps-textwhite">
                 <input type="text" data-cell="F8" value="65">
             </td>
             <td data-cell="G8"></td>
