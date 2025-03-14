@@ -103,62 +103,6 @@ jQuery(document).ready(() => {
 
     // monthly
     const datamonthly = {
-        B2: { formula: `'PG&E Monthly Payment'` },
-        E2: { formula: `'SUNRUN Monthly Payment'` },
-        H2: { formula: `'SAVINGS'` },
-
-        B4: { formula: `'Annual kWh Usage*'` },
-        C4: { formula: `#yr25!C4`, format: `0,0` },
-        E4: { formula: `'Annual System kWh'` },
-        F4: { formula: `C4`, format: `0,0` },
-
-        B5: { formula: `'Average Rate per kWh'` },
-        C5: { formula: `#yr25!C5`, format: `$0,0.000` },
-        E5: { formula: `'Sunrun kWh Rate'` },
-        F5: { formula: `#yr25!F5`, format: `$0.000` },
-        H5: { formula: `'Rate Savings'` },
-        I5: { formula: `1-(F5/C5)`, format: `0%` },
-
-        B6: { formula: `'PG&E Annual Rate Increase %'` },
-        C6: { formula: `#yr25!C6`, format: `0%` },
-        E6: { formula: `'Inflation Escalator'` },
-        F6: { formula: `#yr25!F6`, format: `0.0%` },
-
-        B7: { formula: `#yr25!B8` },
-        C7: { formula: `#yr25!C8`, format: `0` },
-        E7: { formula: `'Monthly Solar'` },
-        F7: { formula: `if(F4<1,C5*F5/12,F4*F5/12)`, format: `$0.00` },
-
-        B8: { formula: `#yr25!B10` },
-        C8: { formula: `C4*C5`, format: `$0,0.00` },
-        E8: { formula: `'Monthly Battery'` },
-        F8: { formula: `#yr25!F8`, format: `$0.00` },
-
-        B9: { formula: `#yr25!B9` },
-        C9: { formula: `C8/12`, format: `$0.00` },
-        E9: { formula: `'Monthly Payment'` },
-        F9: { formula: `F8+F7`, format: `$0.00` },
-        H9: { formula: `'Monthly Savings Yr 1'` },
-        I9: { formula: `C9-F9`, format: `$0.00` },
-
-        B11: { formula: `'Average PG&E Bill 10yrs'` },
-        C11: { formula: `average(C20:C29)`, format: `$0.00` },
-        E11: { formula: `'Average Sunrun Bill 10yrs'` },
-        F11: { formula: `average(F20:F29)`, format: `$0.00` },
-        H11: { formula: `'Savings per Month over 10yrs'` },
-        I11: { formula: `C11-F11`, format: `$0.00` },
-
-        B12: { formula: `'Average PG&E Bill 25yrs'` },
-        C12: { formula: `average(C20:C44)`, format: `$0,0.00` },
-        E12: { formula: `'Average Sunrun Bill 25yrs'` },
-        F12: { formula: `average(F20:F44)`, format: `$0.00` },
-        H12: { formula: `'Savings per Month over 25yrs'` },
-        I12: { formula: `C13-F13`, format: `$0.00` },
-
-        B15: { formula: `GRAPH(C20:C44, ['type=line', 'orientation=vertical'])` },
-        E15: { formula: `GRAPH(F20:F44, ['type=line', 'orientation=vertical'])` },
-        H15: { formula: `GRAPH(C20:F44, ['type=line', 'orientation=vertical'])` },
-
         B17: { formula: `'PG&E'` },
         E17: { formula: `'SUNRUN'` },
         H17: { formula: `'MONTHLY SAVINGS'` },
