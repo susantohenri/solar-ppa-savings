@@ -172,13 +172,13 @@
         </tr>
         <tr>
             <td data-cell="A15"></td>
-            <td data-cell="B15"></td>
-            <td data-cell="C15"></td>
-            <td data-cell="D15"></td>
-            <td data-cell="E15"></td>
-            <td data-cell="F15"></td>
-            <td data-cell="G15"></td>
-            <td data-cell="H15"></td>
+            <!-- <td data-cell="B15"></td> -->
+            <!-- <td data-cell="C15"></td> -->
+            <!-- <td data-cell="D15"></td> -->
+            <td data-cell="E15" colspan="7" style="color: blue;font-size: 22px;font-weight: bold; text-align: center; padding-top: 20px">YEARLY SOLAR SAVINGS</td>
+            <!-- <td data-cell="F15"></td> -->
+            <!-- <td data-cell="G15"></td> -->
+            <!-- <td data-cell="H15"></td> -->
             <td data-cell="I15">&nbsp;</td>
         </tr>
         <tr>

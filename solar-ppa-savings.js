@@ -161,7 +161,7 @@ jQuery(document).ready(() => {
             input.hide()
         })
         const options = {
-            margin: [0.88, 0.15, 0, 0.15],
+            margin: [0.25, 0.15],
             filename: 'Solar PPA Savings.pdf',
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { dpi: 192, letterRendering: true },

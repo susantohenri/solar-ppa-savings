@@ -1,8 +1,5 @@
 <div class="solar-ppa-savings" id="generate-pdf">
     <?php include('sheet-1.php'); ?>
-    <br>
-    <br>
-    <br>
     <?php include('sheet-5.php'); ?>
 </div>
 <div style="text-align: right; padding-bottom: 10px;">
