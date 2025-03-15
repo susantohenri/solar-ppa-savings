@@ -59,3 +59,31 @@
 .sps-textwhite {
     color: white;
 }
+
+/* mobile responsive */
+.solar-ppa-savings {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 20px;
+}
+
+.solar-ppa-savings table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+.solar-ppa-savings th,
+.solar-ppa-savings td {
+    padding: 8px;
+    border: 1px solid #ddd;
+}
+
+@media screen and (max-width: 768px) {
+
+    .solar-ppa-savings th,
+    .solar-ppa-savings td {
+        padding: 4px;
+        font-size: 14px;
+    }
+}
