@@ -29,7 +29,7 @@ jQuery(document).ready(() => {
         H9: { formula: `'Monthly Savings'` },
         // I9: { formula: `(H44/25)/12`, format: `$0.00` }, from original spreadsheet
         // I9: { formula: `(C10/12) - (F10/12)`, format: `$0.00` }, from explanation rtf
-        I9: { formula: `C9-F9`, format: `$0.00` }, // from monthly sheet
+        I9: { formula: `CEILING(C9-F9, 0.01)`, format: `$0.00` }, // from monthly sheet
 
         B10: { formula: `'Annual Electricity Payments'` },
         C10: { formula: `C9*12`, format: `$0,0.00` },
