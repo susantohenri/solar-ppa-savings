@@ -45,10 +45,6 @@ jQuery(document).ready(() => {
         H12: { formula: `'Lifetime Savings'` },
         I12: { formula: `C12-F12`, format: `$0,0.00` },
 
-        B14: { formula: `GRAPH(C19:C43, ['type=line', 'orientation=vertical'])` },
-        E14: { formula: `GRAPH(F19:F43, ['type=line', 'orientation=vertical'])` },
-        H14: { formula: `GRAPH(C19:F43, ['type=line', 'orientation=vertical'])` },
-
         B16: { formula: `'PG&E'` },
         E16: { formula: `'SUNRUN'` },
         H16: { formula: `'SAVINGS'` },
@@ -86,7 +82,34 @@ jQuery(document).ready(() => {
     }
 
     jQuery(`#yr25`).calx({
-        data: data25yr
+        data: data25yr,
+        onAfterRender: () => {
+            const b14 = `#yr25 td[data-cell="B14"]`
+            const e14 = `#yr25 td[data-cell="E14"]`
+            const h14 = `#yr25 td[data-cell="H14"]`
+            const g1 = []
+            const g2 = []
+
+            for (let row = 20; row <= 43; row++) {
+                g1.push([
+                    jQuery(`#yr25`).calx(`getCell`, `B${row}`).value,
+                    jQuery(`#yr25`).calx(`getCell`, `C${row}`).computedValue,
+                ])
+                g2.push([
+                    jQuery(`#yr25`).calx(`getCell`, `E${row}`).value,
+                    jQuery(`#yr25`).calx(`getCell`, `F${row}`).computedValue,
+                ])
+            }
+
+            jQuery(b14).html(``)
+            jQuery.plot(b14, [g1], { yaxis: { max: 25000 } });
+
+            jQuery(e14).html(``)
+            jQuery.plot(e14, [g2], { yaxis: { max: 25000 } });
+
+            jQuery(h14).html(``)
+            jQuery.plot(h14, [g1, g2], { yaxis: { max: 25000 } });
+        }
     });
 
     for (let blue = 4; blue <= 10; blue++) {
@@ -155,10 +178,6 @@ jQuery(document).ready(() => {
         H12: { formula: `'Savings per Month over 25yrs'` },
         I12: { formula: `C13-F13`, format: `$0.00` },
 
-        B15: { formula: `GRAPH(C20:C44, ['type=line', 'orientation=vertical'])` },
-        E15: { formula: `GRAPH(F20:F44, ['type=line', 'orientation=vertical'])` },
-        H15: { formula: `GRAPH(C20:F44, ['type=line', 'orientation=vertical'])` },
-
         B17: { formula: `'PG&E'` },
         E17: { formula: `'SUNRUN'` },
         H17: { formula: `'MONTHLY SAVINGS'` },
@@ -221,7 +240,7 @@ jQuery(document).ready(() => {
             input.hide()
         })
         const options = {
-            margin: [0.25, 0.15],
+            margin: 0.15,
             filename: 'Solar PPA Savings.pdf',
             image: { type: 'jpeg', quality: 0.98 },
             html2canvas: { dpi: 192, letterRendering: true },

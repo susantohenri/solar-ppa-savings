@@ -20,6 +20,12 @@
     text-align: right;
 }
 
+#yr25 [data-cell="B14"],
+#yr25 [data-cell="E14"],
+#yr25 [data-cell="H14"] {
+    height: 300px;
+}
+
 .solar-ppa-savings table [type="text"] {
     margin: 2px auto;
     height: 20px;

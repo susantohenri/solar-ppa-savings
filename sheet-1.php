@@ -161,7 +161,7 @@
         </tr>
         <tr>
             <td data-cell="A14"></td>
-            <td data-cell="B14" colspan="2"></td>
+            <td data-cell="B14" colspan="1"></td>
             <!-- <td data-cell="C14"></td> -->
             <td data-cell="D14"></td>
             <td data-cell="E14" colspan="2"></td>
