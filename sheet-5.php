@@ -5,7 +5,7 @@
             <!-- <td data-cell="B1"></td> -->
             <!-- <td data-cell="C1"></td> -->
             <!-- <td data-cell="D1"></td> -->
-            <td data-cell="E1" colspan="7" style="color: blue;font-size: 22px;font-weight: bold; text-align: center;">MONTHLY SOLAR SAVINGS</td>
+            <td data-cell="E1" colspan="7" style="color: blue;font-size: 22px;font-weight: bold; text-align: center;">MONTHLY PAYMENT CALCULATOR</td>
             <!-- <td data-cell="F1"></td> -->
             <!-- <td data-cell="G1"></td> -->
             <!-- <td data-cell="H1"></td> -->

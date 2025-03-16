@@ -181,8 +181,8 @@ jQuery(document).ready(() => {
         H12: { formula: `'Savings per Month over 25yrs'` },
         I12: { formula: `C13-F13`, format: `$0.00` },
 
-        B17: { formula: `'PG&E'` },
-        E17: { formula: `'SUNRUN'` },
+        B17: { formula: `'PG&E Monthly Payment'` },
+        E17: { formula: `'SUNRUN Monthly Payment'` },
         H17: { formula: `'MONTHLY SAVINGS'` },
 
         B18: { formula: `'Rate per kWh'` },
@@ -219,6 +219,10 @@ jQuery(document).ready(() => {
 
     for (let upperMonthly = 2; upperMonthly <= 15; upperMonthly++) {
         jQuery(`#monthly td[data-cell="A${upperMonthly}"]`).parent().hide()
+    }
+    jQuery(`#monthly td[data-cell="A45"]`).parent().hide()// lower monthly
+    for (let rightMonthly = 17; rightMonthly <= 45; rightMonthly++) {
+        jQuery(`#monthly td[data-cell="H${rightMonthly}"]`).hide()
     }
 
     jQuery(`#monthly`).calx({ data: datamonthly });
