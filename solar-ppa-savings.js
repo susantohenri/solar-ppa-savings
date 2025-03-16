@@ -14,6 +14,8 @@ jQuery(document).ready(() => {
 
         B6: { formula: `'PG&E Annual Rate Increase %'` },
         E6: { formula: `'Inflation Escalator'` },
+        H6: { formula: `'Cash Savings'` },
+        I6: { formula: `(C10 - F10) / C10`, format: `0%` },
 
         E7: { formula: `'Monthly Solar'` },
         F7: { formula: `if(F4<1,C4*F5/12,F4*F5/12)`, format: `$0.00` },

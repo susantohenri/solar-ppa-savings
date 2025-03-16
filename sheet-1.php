@@ -75,8 +75,8 @@
                 <input type="text" data-cell="F6" value="0.035">
             </td>
             <td data-cell="G6"></td>
-            <td data-cell="H6"></td>
-            <td data-cell="I6"></td>
+            <td data-cell="H6" class="sps-bggreen sps-textwhite sps-bold"></td>
+            <td data-cell="I6" class="sps-bggreen sps-textwhite sps-bold"></td>
         </tr>
         <tr>
             <td data-cell="A7"></td>
