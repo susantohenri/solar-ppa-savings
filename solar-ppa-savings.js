@@ -15,7 +15,7 @@ jQuery(document).ready(() => {
         B6: { formula: `'PG&E Annual Rate Increase %'` },
         E6: { formula: `'Inflation Escalator'` },
         H6: { formula: `'Cash Savings'` },
-        I6: { formula: `(C10 - F10) / C10`, format: `0%` },
+        I6: { formula: `(C10 - F10) / C10`, format: `0%` },// additional request outside spreadsheet
 
         E7: { formula: `'Monthly Solar'` },
         F7: { formula: `if(F4<1,C4*F5/12,F4*F5/12)`, format: `$0.00` },
@@ -38,7 +38,8 @@ jQuery(document).ready(() => {
         E10: { formula: `'Annual Payment'` },
         F10: { formula: `F9*12`, format: `$0,0.00` },
         H10: { formula: `'Annual Savings'` },
-        I10: { formula: `H44/25`, format: `$0,0.00` },
+        // I10: { formula: `H44/25`, format: `$0,0.00` }, from original spreadsheet
+        I10: { formula: `C10 - F10`, format: `$0,0.00` }, // revision by chat
 
         B12: { formula: `'Total PG&E Spend 25yrs'` },
         C12: { formula: `C44`, format: `$0,0.00` },
