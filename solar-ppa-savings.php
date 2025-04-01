@@ -8,7 +8,7 @@ add_shortcode('solar-ppa-savings-calculator', function () {
         'solar-ppa-savings',
         plugins_url('/solar-ppa-savings.css', __FILE__),
         [],
-        3
+        5
     );
     wp_enqueue_style('solar-ppa-savings');
 
@@ -40,7 +40,7 @@ add_shortcode('solar-ppa-savings-calculator', function () {
         'solar-ppa-savings',
         plugins_url('/solar-ppa-savings.js', __FILE__),
         [],
-        4
+        5
     );
     wp_enqueue_script('solar-ppa-savings');
 

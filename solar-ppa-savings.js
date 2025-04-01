@@ -62,26 +62,47 @@ jQuery(document).ready(() => {
         E18: { formula: `'Inflation Escalator'` },
         F18: { formula: `F6`, format: `0.0%` },
 
-        B19: { formula: `'What You Pay Per Year'` },
-        C19: { formula: `C10`, format: `$0,0.00` },
-        E19: { formula: `'What You Pay Per Year'` },
-        F19: { formula: `F9*12`, format: `$0,0.00` },
-        H19: { formula: `C19-F19`, format: `$0,0.00` },
-
-        B44: { formula: `'25 Years Cost'` },
-        C44: { formula: `SUM(C19:C43)`, format: `$0,0.00` },
-        E44: { formula: `'25 Years Cost'` },
-        F44: { formula: `SUM(F19:F43)`, format: `$0,0.00` },
-        H44: { formula: `SUM(H19:H43)`, format: `$0,0.00` },
+        B48: { formula: `'25 Years Cost'` },
+        C48: { formula: `SUM(C19:C43)`, format: `$0,0.00` },
+        E48: { formula: `'25 Years Cost'` },
+        F48: { formula: `SUM(F19:F43)`, format: `$0,0.00` },
+        H48: { formula: `SUM(H19:H43)`, format: `$0,0.00` },
     }
 
-    for (let breakdown = 20; breakdown <= 43; breakdown++) {
-        const rMin1 = breakdown - 1;
-        data25yr[`B${breakdown}`] = { value: breakdown - 18 }
-        data25yr[`C${breakdown}`] = { formula: `C${rMin1}*(1+C18)`, format: `$0,0.00` }
-        data25yr[`E${breakdown}`] = { value: breakdown - 18 }
-        data25yr[`F${breakdown}`] = { formula: `F${rMin1}*(1+F18)`, format: `$0,0.00` }
-        data25yr[`H${breakdown}`] = { formula: `C${breakdown}-F${breakdown}`, format: `$0,0.00` }
+    let yssIndex = 1
+    let yssRow = 19
+    let ythrough = 5
+    let initialYTrough = 19
+    while (yssRow <= 47) {
+        let rMin1 = yssRow - 1;
+        if (1 === yssIndex) {
+            data25yr[`B${yssRow}`] = { value: yssIndex }
+            data25yr[`C${yssRow}`] = { formula: `C10`, format: `$0,0.00` }
+            data25yr[`E${yssRow}`] = { value: yssIndex }
+            data25yr[`F${yssRow}`] = { formula: `F9*12`, format: `$0,0.00` }
+            data25yr[`H${yssRow}`] = { formula: `C19-F19`, format: `$0,0.00` }
+            yssIndex++;
+        } else if ([24, 30, 36, 42].includes(yssRow)) {
+            data25yr[`B${yssRow}`] = { value: `Total ythrough ${ythrough} Years` }
+            data25yr[`C${yssRow}`] = { formula: `SUM(C${initialYTrough}:C${rMin1})`, format: `$0,0.00` }
+            data25yr[`E${yssRow}`] = { value: `Total ythrough ${ythrough} Years` }
+            data25yr[`F${yssRow}`] = { formula: `SUM(F${initialYTrough}:F${rMin1})`, format: `$0,0.00` }
+            data25yr[`H${yssRow}`] = { formula: `SUM(H${initialYTrough}:H${rMin1})`, format: `$0,0.00` }
+            ythrough += 5
+        } else {
+            if ([25, 31, 37, 43].includes(yssRow)) {
+                rMin1--;
+                initialYTrough = yssRow
+            }
+
+            data25yr[`B${yssRow}`] = { value: yssIndex }
+            data25yr[`C${yssRow}`] = { formula: `C${rMin1}*(1+C18)`, format: `$0,0.00` }
+            data25yr[`E${yssRow}`] = { value: yssIndex }
+            data25yr[`F${yssRow}`] = { formula: `F${rMin1}*(1+F18)`, format: `$0,0.00` }
+            data25yr[`H${yssRow}`] = { formula: `C${yssRow}-F${yssRow}`, format: `$0,0.00` }
+            yssIndex++;
+        }
+        yssRow++;
     }
 
     jQuery(`#yr25`).calx({
@@ -94,6 +115,7 @@ jQuery(document).ready(() => {
             const g2 = []
 
             for (let row = 20; row <= 43; row++) {
+                if ([24, 30, 36, 42].includes(row)) continue;
                 g1.push([
                     jQuery(`#yr25`).calx(`getCell`, `B${row}`).value,
                     jQuery(`#yr25`).calx(`getCell`, `C${row}`).computedValue,
@@ -195,12 +217,6 @@ jQuery(document).ready(() => {
         E19: { formula: `'Inflation Escalator'` },
         F19: { formula: `F6`, format: `0.0%` },
 
-        B20: { formula: `'Year 1 Bill'` },
-        C20: { formula: `C9`, format: `$0,0.00` },
-        E20: { formula: `'Year 1 Bill'` },
-        F20: { formula: `F9`, format: `$0,0.00` },
-        H20: { formula: `C20-F20`, format: `$0,0.00` },
-
         B45: { formula: `'25 Years Cost'` },
         C45: { formula: `SUM(C20:C44)`, format: `$0,0.00` },
         E45: { formula: `'25 Years Cost'` },
@@ -208,13 +224,34 @@ jQuery(document).ready(() => {
         H45: { formula: `SUM(H20:H44)`, format: `$0,0.00` },
     }
 
-    for (let breakdown = 21; breakdown <= 44; breakdown++) {
-        const rMin1 = breakdown - 1;
-        datamonthly[`B${breakdown}`] = { value: breakdown - 19 }
-        datamonthly[`C${breakdown}`] = { formula: `C${rMin1}*(1+C19)`, format: `$0,0.00` }
-        datamonthly[`E${breakdown}`] = { value: breakdown - 19 }
-        datamonthly[`F${breakdown}`] = { formula: `F${rMin1}*(1+F19)`, format: `$0,0.00` }
-        datamonthly[`H${breakdown}`] = { formula: `C${breakdown}-F${breakdown}`, format: `$0,0.00` }
+    let mpcIndex = 1
+    let mpcRow = 20
+    let mtrough = 5
+    let initialMTrough = 20
+    while (mpcRow <= 47) {
+        let rMin1 = mpcRow - 1;
+        if (1 === mpcIndex) {
+            datamonthly[`B${mpcRow}`] = { value: mpcIndex }
+            datamonthly[`C${mpcRow}`] = { formula: `C9`, format: `$0,0.00` }
+            datamonthly[`E${mpcRow}`] = { value: mpcIndex }
+            mpcIndex++;
+        } else if ([24, 30, 36, 42].includes(mpcRow)) {
+            datamonthly[`B${mpcRow}`] = { value: `Total Through ${mtrough} Years` }
+            datamonthly[`C${mpcRow}`] = { formula: `SUM(C${initialMTrough}:C${rMin1})`, format: `$0,0.00` }
+            datamonthly[`E${mpcRow}`] = { value: `Total Through ${mtrough} Years` }
+            mtrough += 5
+        } else {
+            if ([25, 31, 37, 43].includes(mpcRow)) {
+                rMin1--;
+                initialMTrough = mpcRow
+            }
+
+            datamonthly[`B${mpcRow}`] = { value: mpcIndex }
+            datamonthly[`C${mpcRow}`] = { formula: `C${rMin1}*(1+C19)`, format: `$0,0.00` }
+            datamonthly[`E${mpcRow}`] = { value: mpcIndex }
+            mpcIndex++;
+        }
+        mpcRow++;
     }
 
     for (let upperMonthly = 2; upperMonthly <= 15; upperMonthly++) {

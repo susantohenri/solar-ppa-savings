@@ -34,6 +34,14 @@
     width: 100px;
 }
 
+.solar-ppa-savings table td[data-cell$="24"],
+.solar-ppa-savings table td[data-cell$="30"],
+.solar-ppa-savings table td[data-cell$="36"],
+.solar-ppa-savings table td[data-cell$="42"]{
+    font-weight: bold;
+    background-color: #fffcdc;
+}
+
 .sps-bgred {
     background-color: red;
 }
