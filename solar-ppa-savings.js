@@ -83,9 +83,9 @@ jQuery(document).ready(() => {
             data25yr[`H${yssRow}`] = { formula: `C19-F19`, format: `$0,0.00` }
             yssIndex++;
         } else if ([24, 30, 36, 42].includes(yssRow)) {
-            data25yr[`B${yssRow}`] = { value: `Total ythrough ${ythrough} Years` }
+            data25yr[`B${yssRow}`] = { value: `Total through ${ythrough} Years` }
             data25yr[`C${yssRow}`] = { formula: `SUM(C${initialYTrough}:C${rMin1})`, format: `$0,0.00` }
-            data25yr[`E${yssRow}`] = { value: `Total ythrough ${ythrough} Years` }
+            data25yr[`E${yssRow}`] = { value: `Total through ${ythrough} Years` }
             data25yr[`F${yssRow}`] = { formula: `SUM(F${initialYTrough}:F${rMin1})`, format: `$0,0.00` }
             data25yr[`H${yssRow}`] = { formula: `SUM(H${initialYTrough}:H${rMin1})`, format: `$0,0.00` }
             ythrough += 5
