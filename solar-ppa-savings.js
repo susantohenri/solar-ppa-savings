@@ -77,9 +77,9 @@ jQuery(document).ready(() => {
         let rMin1 = yssRow - 1;
         if (1 === yssIndex) {
             data25yr[`B${yssRow}`] = { value: yssIndex }
-            data25yr[`C${yssRow}`] = { formula: `C10`, format: `$0,0.00` }
+            data25yr[`C${yssRow}`] = { formula: `C10*(1+C18)`, format: `$0,0.00` }
             data25yr[`E${yssRow}`] = { value: yssIndex }
-            data25yr[`F${yssRow}`] = { formula: `F9*12`, format: `$0,0.00` }
+            data25yr[`F${yssRow}`] = { formula: `F9*12*(1+F18)`, format: `$0,0.00` }
             data25yr[`H${yssRow}`] = { formula: `C19-F19`, format: `$0,0.00` }
             yssIndex++;
         } else if ([24, 30, 36, 42].includes(yssRow)) {
