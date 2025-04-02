@@ -217,6 +217,12 @@ jQuery(document).ready(() => {
         E19: { formula: `'Inflation Escalator'` },
         F19: { formula: `F6`, format: `0.0%` },
 
+        B20: { formula: `1` },
+        C20: { formula: `C9`, format: `$0,0.00` },
+        E20: { formula: `1` },
+        F20: { formula: `F9`, format: `$0,0.00` },
+        H20: { formula: `C20-F20`, format: `$0,0.00` },
+
         B45: { formula: `'25 Years Cost'` },
         C45: { formula: `SUM(C20:C44)`, format: `$0,0.00` },
         E45: { formula: `'25 Years Cost'` },
@@ -224,37 +230,13 @@ jQuery(document).ready(() => {
         H45: { formula: `SUM(H20:H44)`, format: `$0,0.00` },
     }
 
-    let mpcIndex = 1
-    let mpcRow = 20
-    let mtrough = 5
-    let initialMTrough = 20
-    while (mpcRow <= 48) {
-        let rMin1 = mpcRow - 1;
-        if (1 === mpcIndex) {
-            datamonthly[`B${mpcRow}`] = { value: mpcIndex }
-            datamonthly[`C${mpcRow}`] = { formula: `C9`, format: `$0,0.00` }
-            datamonthly[`E${mpcRow}`] = { value: mpcIndex }
-            datamonthly[`F${mpcRow}`] = { formula: `F9`, format: `$0,0.00` }
-            mpcIndex++;
-        } else if ([24, 30, 36, 42].includes(mpcRow)) {
-            datamonthly[`B${mpcRow}`] = { value: `Total Through ${mtrough} Years` }
-            datamonthly[`C${mpcRow}`] = { formula: `SUM(C${initialMTrough}:C${rMin1})`, format: `$0,0.00` }
-            datamonthly[`E${mpcRow}`] = { value: `Total Through ${mtrough} Years` }
-            datamonthly[`F${mpcRow}`] = { formula: `F${rMin1}*(1+F19)`, format: `$0,0.00` }
-            mtrough += 5
-        } else {
-            if ([25, 31, 37, 43].includes(mpcRow)) {
-                rMin1--;
-                initialMTrough = mpcRow
-            }
-
-            datamonthly[`B${mpcRow}`] = { value: mpcIndex }
-            datamonthly[`C${mpcRow}`] = { formula: `C${rMin1}*(1+C19)`, format: `$0,0.00` }
-            datamonthly[`E${mpcRow}`] = { value: mpcIndex }
-            datamonthly[`F${mpcRow}`] = { formula: `F${rMin1}*(1+F19)`, format: `$0,0.00` }
-            mpcIndex++;
-        }
-        mpcRow++;
+    for (let breakdown = 21; breakdown <= 44; breakdown++) {
+        const rMin1 = breakdown - 1;
+        datamonthly[`B${breakdown}`] = { value: breakdown - 19 }
+        datamonthly[`C${breakdown}`] = { formula: `C${rMin1}*(1+C19)`, format: `$0,0.00` }
+        datamonthly[`E${breakdown}`] = { value: breakdown - 19 }
+        datamonthly[`F${breakdown}`] = { formula: `F${rMin1}*(1+F19)`, format: `$0,0.00` }
+        datamonthly[`H${breakdown}`] = { formula: `C${breakdown}-F${breakdown}`, format: `$0,0.00` }
     }
 
     for (let upperMonthly = 2; upperMonthly <= 15; upperMonthly++) {
