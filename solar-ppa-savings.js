@@ -228,17 +228,19 @@ jQuery(document).ready(() => {
     let mpcRow = 20
     let mtrough = 5
     let initialMTrough = 20
-    while (mpcRow <= 47) {
+    while (mpcRow <= 48) {
         let rMin1 = mpcRow - 1;
         if (1 === mpcIndex) {
             datamonthly[`B${mpcRow}`] = { value: mpcIndex }
             datamonthly[`C${mpcRow}`] = { formula: `C9`, format: `$0,0.00` }
             datamonthly[`E${mpcRow}`] = { value: mpcIndex }
+            datamonthly[`F${mpcRow}`] = { formula: `F9`, format: `$0,0.00` }
             mpcIndex++;
         } else if ([24, 30, 36, 42].includes(mpcRow)) {
             datamonthly[`B${mpcRow}`] = { value: `Total Through ${mtrough} Years` }
             datamonthly[`C${mpcRow}`] = { formula: `SUM(C${initialMTrough}:C${rMin1})`, format: `$0,0.00` }
             datamonthly[`E${mpcRow}`] = { value: `Total Through ${mtrough} Years` }
+            datamonthly[`F${mpcRow}`] = { formula: `F${rMin1}*(1+F19)`, format: `$0,0.00` }
             mtrough += 5
         } else {
             if ([25, 31, 37, 43].includes(mpcRow)) {
@@ -249,6 +251,7 @@ jQuery(document).ready(() => {
             datamonthly[`B${mpcRow}`] = { value: mpcIndex }
             datamonthly[`C${mpcRow}`] = { formula: `C${rMin1}*(1+C19)`, format: `$0,0.00` }
             datamonthly[`E${mpcRow}`] = { value: mpcIndex }
+            datamonthly[`F${mpcRow}`] = { formula: `F${rMin1}*(1+F19)`, format: `$0,0.00` }
             mpcIndex++;
         }
         mpcRow++;
