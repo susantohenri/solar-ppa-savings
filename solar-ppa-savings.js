@@ -42,9 +42,9 @@ jQuery(document).ready(() => {
         I10: { formula: `C10 - F10`, format: `$0,0.00` }, // revision by chat
 
         B12: { formula: `'Total PG&E Spend 25yrs'` },
-        C12: { formula: `C44`, format: `$0,0.00` },
+        C12: { formula: `C48`, format: `$0,0.00` },
         E12: { formula: `'Total Sunrun Spend 25yrs'` },
-        F12: { formula: `F44`, format: `$0,0.00` },
+        F12: { formula: `F48`, format: `$0,0.00` },
         H12: { formula: `'Lifetime Savings'` },
         I12: { formula: `C12-F12`, format: `$0,0.00` },
 
@@ -63,10 +63,10 @@ jQuery(document).ready(() => {
         F18: { formula: `F6`, format: `0.0%` },
 
         B48: { formula: `'25 Years Cost'` },
-        C48: { formula: `SUM(C19:C43)`, format: `$0,0.00` },
+        C48: { formula: `SUM(C43:C47;C37:C41;C31:C35;C25:C29;C19:C23)`, format: `$0,0.00` },
         E48: { formula: `'25 Years Cost'` },
-        F48: { formula: `SUM(F19:F43)`, format: `$0,0.00` },
-        H48: { formula: `SUM(H19:H43)`, format: `$0,0.00` },
+        F48: { formula: `SUM(F43:F47;F37:F41;F31:F35;F25:F29;F19:F23)`, format: `$0,0.00` },
+        H48: { formula: `SUM(H43:H47;H37:H41;H31:H35;H25:H29;H19:H23)`, format: `$0,0.00` },
     }
 
     let yssIndex = 1
@@ -84,10 +84,31 @@ jQuery(document).ready(() => {
             yssIndex++;
         } else if ([24, 30, 36, 42].includes(yssRow)) {
             data25yr[`B${yssRow}`] = { value: `Total through ${ythrough} Years` }
-            data25yr[`C${yssRow}`] = { formula: `SUM(C${initialYTrough}:C${rMin1})`, format: `$0,0.00` }
             data25yr[`E${yssRow}`] = { value: `Total through ${ythrough} Years` }
-            data25yr[`F${yssRow}`] = { formula: `SUM(F${initialYTrough}:F${rMin1})`, format: `$0,0.00` }
-            data25yr[`H${yssRow}`] = { formula: `SUM(H${initialYTrough}:H${rMin1})`, format: `$0,0.00` }
+
+            switch (yssRow) {
+                case 24:
+                    data25yr[`C${yssRow}`] = { formula: `SUM(C19:C23)`, format: `$0,0.00` }
+                    data25yr[`F${yssRow}`] = { formula: `SUM(F19:F23)`, format: `$0,0.00` }
+                    data25yr[`H${yssRow}`] = { formula: `SUM(H19:H23)`, format: `$0,0.00` }
+                        ; break
+                case 30:
+                    data25yr[`C${yssRow}`] = { formula: `SUM(C19:C23;C25:C29)`, format: `$0,0.00` }
+                    data25yr[`F${yssRow}`] = { formula: `SUM(F19:F23;F25:F29)`, format: `$0,0.00` }
+                    data25yr[`H${yssRow}`] = { formula: `SUM(H19:H23;H25:H29)`, format: `$0,0.00` }
+                        ; break
+                case 36:
+                    data25yr[`C${yssRow}`] = { formula: `SUM(C31:C35;C25:C29;C19:C23)`, format: `$0,0.00` }
+                    data25yr[`F${yssRow}`] = { formula: `SUM(F31:F35;F25:F29;F19:F23)`, format: `$0,0.00` }
+                    data25yr[`H${yssRow}`] = { formula: `SUM(H31:H35;H25:H29;H19:H23)`, format: `$0,0.00` }
+                        ; break
+                case 42:
+                    data25yr[`C${yssRow}`] = { formula: `SUM(C37:C41;C31:C35;C25:C29;C19:C23)`, format: `$0,0.00` }
+                    data25yr[`F${yssRow}`] = { formula: `SUM(F37:F41;F31:F35;F25:F29;F19:F23)`, format: `$0,0.00` }
+                    data25yr[`H${yssRow}`] = { formula: `SUM(H37:H41;H31:H35;H25:H29;H19:H23)`, format: `$0,0.00` }
+                        ; break
+            }
+
             ythrough += 5
         } else {
             if ([25, 31, 37, 43].includes(yssRow)) {

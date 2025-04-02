@@ -37,7 +37,8 @@
 .solar-ppa-savings table#yr25 td[data-cell$="24"],
 .solar-ppa-savings table#yr25 td[data-cell$="30"],
 .solar-ppa-savings table#yr25 td[data-cell$="36"],
-.solar-ppa-savings table#yr25 td[data-cell$="42"]{
+.solar-ppa-savings table#yr25 td[data-cell$="42"],
+.solar-ppa-savings table#yr25 td[data-cell$="48"] {
     font-weight: bold;
     background-color: #fffcdc;
 }
